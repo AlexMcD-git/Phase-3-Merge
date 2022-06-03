@@ -1,4 +1,5 @@
 require './config/environment'
+use Rack::JSONBodyParser
 
 class ApplicationController < Sinatra::Base
 

@@ -9,16 +9,17 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (7.0.3)
-      activesupport (= 7.0.3)
-    activerecord (7.0.3)
-      activemodel (= 7.0.3)
-      activesupport (= 7.0.3)
-    activesupport (7.0.3)
+    activemodel (6.1.6)
+      activesupport (= 6.1.6)
+    activerecord (6.1.6)
+      activemodel (= 6.1.6)
+      activesupport (= 6.1.6)
+    activesupport (6.1.6)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.18)
@@ -58,6 +59,8 @@ GEM
     public_suffix (4.0.7)
     racc (1.6.0)
     rack (2.2.3.1)
+    rack-contrib (2.3.0)
+      rack (~> 2.0)
     rack-cors (1.1.1)
       rack (>= 2.0.0)
     rack-protection (2.2.0)
@@ -114,27 +117,29 @@ GEM
       concurrent-ruby (~> 1.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  activerecord
+  activerecord (~> 6.1)
   bcrypt
   capybara
   database_cleaner!
   faker
   pry
-  rack-cors
+  rack-contrib (~> 2.3)
+  rack-cors (~> 1.1)
   rack-test
-  rake
-  require_all
+  rake (~> 13.0)
+  require_all (~> 3.0)
   rspec
   shotgun
-  sinatra
-  sinatra-activerecord
-  sqlite3
-  thin
+  sinatra (~> 2.1)
+  sinatra-activerecord (~> 2.0)
+  sqlite3 (~> 1.4)
+  thin (~> 1.8)
   tux
 
 BUNDLED WITH

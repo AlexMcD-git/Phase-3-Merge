@@ -1,17 +1,20 @@
 source 'http://rubygems.org'
 
-gem 'sinatra'
-gem 'activerecord'
-gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
-gem 'rake'
-gem 'require_all'
-gem 'sqlite3'
-gem 'thin'
+gem "sinatra", "~> 2.1"
+gem "activerecord", "~> 6.1"
+gem "sinatra-activerecord", "~> 2.0"
+gem "rake", "~> 13.0"
+gem "require_all", "~> 3.0"
+gem "sqlite3", "~> 1.4"
+gem "thin", "~> 1.8"
 gem 'shotgun'
 gem 'pry'
 gem 'bcrypt'
 gem 'tux'
 gem 'faker'
+
+gem "rack-contrib", "~> 2.3"
+gem "rack-cors", "~> 1.1"
 
 group :test do
   gem 'rspec'
