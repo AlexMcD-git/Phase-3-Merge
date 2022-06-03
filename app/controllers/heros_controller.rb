@@ -20,7 +20,11 @@ class HerosController < ApplicationController
     Hero.find(params[:id]).to_json(include: :items)
   end
 
-
+  delete "/heros/:id" do
+    hero = Hero.find(params[:id])
+    hero.items.destroy_all
+    hero.quests.destroy_all
+  end
 
 
 

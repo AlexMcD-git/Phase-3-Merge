@@ -5,6 +5,8 @@ class QuestsController < ApplicationController
     Quest.all.to_json
   end
 
+  
+
 
   # PATCH: /quests/5
   patch "/quests/:id" do
